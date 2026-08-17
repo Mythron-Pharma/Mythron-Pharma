@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
+
 import Manufacturing from "@/components/Manufacturing";
+
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
@@ -7,7 +9,10 @@ export default function Home() {
     <SmoothScroll>
       <div className="flex flex-col min-h-screen">
         <Hero />
+
+
         <Manufacturing />
+
       </div>
     </SmoothScroll>
   );

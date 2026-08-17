@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Microscope, Globe, HeartPulse, Activity, ArrowRight } from "lucide-react";
+import { Microscope, Globe, HeartPulse, Activity, ArrowRight, Sparkles } from "lucide-react";
 
 const pillars = [
   {
@@ -27,7 +27,7 @@ const pillars = [
   },
   {
     title: "Robotic Velocity",
-    tag: "SYNTHESIS",
+    tag: "AUTOMATED_SYNTHESIS",
     desc: "Harnessing robotic manufacturing lines to deliver consistent purity threshold outputs.",
     icon: Activity,
     image: "/hero-professional.png"
@@ -36,79 +36,88 @@ const pillars = [
 
 export default function Values() {
   return (
-    <section id="values" className="bg-white">
+    <section id="values" className="py-24 lg:py-32 bg-white relative overflow-hidden">
       
-      {/* ── MANIFESTO INTRO ── */}
-      <div className="py-24 lg:py-32 px-6 text-center max-w-4xl mx-auto">
-         <motion.div
-           initial={{ opacity: 0, y: 15 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-         >
-            <span className="text-[9px] font-bold uppercase tracking-[0.4em] text-brand-blue/30 mb-4 block italic">Institutional Logic</span>
-            <h2 className="text-4xl lg:text-7xl font-bold text-brand-blue tracking-tighter leading-none mb-10">
-               Scientific <br />
-               <span className="text-brand-green italic font-light">Heritage.</span>
-            </h2>
-            <p className="text-base lg:text-lg text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-               Stabilizing complex therapeutic indices through modular synthesis and global scale.
-            </p>
-         </motion.div>
-      </div>
+      {/* Background Accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-gradient-to-b from-slate-50/80 via-emerald-50/20 to-transparent pointer-events-none" />
 
-      {/* ── FOCUS PANELS ── */}
-      <div className="space-y-4 md:space-y-32 pb-32">
-        {pillars.map((pillar, i) => (
-          <div key={i} className="relative w-full min-h-[70vh] lg:min-h-[85vh] flex flex-col items-center justify-center px-6">
-            
-            {/* Background Narrative Visual */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-               <motion.img 
-                  initial={{ scale: 1.2, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5 }}
-                  src={pillar.image} 
-                  className="w-full h-full object-cover grayscale brightness-50 lg:brightness-100 lg:grayscale" 
-                  alt={pillar.title} 
-               />
-               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-white" />
-            </div>
+      <div className="w-full max-w-[1800px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+        
+        {/* ── INTRO HEADER (LEFT ALIGNED WIDE) ── */}
+        <div className="w-full mb-16 border-b border-slate-200 pb-8 text-left">
+           <motion.div
+             initial={{ opacity: 0, y: 15 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             className="space-y-3"
+           >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-800">Corporate Pillars</span>
+              </div>
+              
+              <h2 className="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                 Scientific <span className="text-emerald-600">Heritage & Values</span>
+              </h2>
+              
+              <p className="text-slate-600 text-sm lg:text-base font-normal leading-relaxed max-w-2xl">
+                 Stabilizing complex therapeutic indices through modular synthesis, automated clinical validation, and patient-first commitment.
+              </p>
+           </motion.div>
+        </div>
 
-            {/* Floating Statement Card */}
+        {/* ── 4-COLUMN CARDS GRID ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pillars.map((pillar, i) => (
             <motion.div
-               initial={{ opacity: 0, y: 40 }}
+               key={i}
+               initial={{ opacity: 0, y: 25 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               transition={{ duration: 0.8, delay: 0.2 }}
-               className="relative z-10 bg-white border border-gray-50 p-8 md:p-16 rounded-[3rem] shadow-3xl max-w-3xl w-full text-center group"
+               transition={{ duration: 0.6, delay: i * 0.1 }}
+               className="group bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(16,185,129,0.15)] hover:border-emerald-500/50 transition-all duration-500 flex flex-col justify-between"
             >
-               <div className="w-12 h-12 bg-brand-blue/5 rounded-2xl flex items-center justify-center mx-auto mb-8 transition-all duration-700 group-hover:bg-brand-blue group-hover:text-white">
-                  <pillar.icon className="w-5 h-5" />
+               {/* Image Header */}
+               <div className="relative aspect-[16/10] overflow-hidden">
+                  <img 
+                    src={pillar.image} 
+                    alt={pillar.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                  
+                  {/* Floating Icon */}
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-md flex items-center justify-center text-emerald-600 shadow-md">
+                     <pillar.icon className="w-5 h-5 stroke-[2.2]" />
+                  </div>
                </div>
-               
-               <span className="text-[9px] font-black tracking-[0.3em] text-brand-green uppercase mb-4 block">{pillar.tag}</span>
-               
-               <h3 className="text-4xl md:text-5xl font-black text-brand-blue tracking-tighter leading-none mb-8">
-                  {pillar.title}.
-               </h3>
-               
-               <p className="text-base md:text-xl text-gray-400 font-light leading-relaxed mb-10 max-w-xl mx-auto">
-                  {pillar.desc}
-               </p>
 
-               <div className="flex items-center justify-center gap-6 pt-4 border-t border-gray-50">
-                  <span className="text-[9px] font-black text-brand-blue/20 uppercase tracking-[0.1em]">Verification Level 0{i+1}</span>
-                  <div className="w-8 h-8 rounded-full border border-gray-100 flex items-center justify-center text-brand-blue hover:bg-brand-blue hover:text-white transition-all cursor-pointer">
-                     <ArrowRight className="w-3 h-3" />
+               {/* Card Body */}
+               <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60 inline-block mb-3">
+                       {pillar.tag}
+                    </span>
+                    <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-emerald-600 transition-colors">
+                       {pillar.title}
+                    </h3>
+                    <p className="text-slate-600 text-sm font-normal leading-relaxed mt-3">
+                       {pillar.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-700">
+                     <span>Pillar 0{i+1}</span>
+                     <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-gradient-to-r group-hover:from-emerald-500 group-hover:to-teal-500 group-hover:text-white text-slate-700 flex items-center justify-center transition-all">
+                        <ArrowRight className="w-4 h-4" />
+                     </div>
                   </div>
                </div>
             </motion.div>
+          ))}
+        </div>
 
-          </div>
-        ))}
       </div>
-
     </section>
   );
 }

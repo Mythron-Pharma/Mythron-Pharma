@@ -2,193 +2,179 @@
 
 import { motion } from "framer-motion";
 import { 
-  Send, 
   MapPin, 
   Mail, 
   Phone, 
   Clock, 
   Globe2, 
   Building2, 
-  Users2,
-  Stethoscope,
-  ArrowRight,
   ShieldCheck,
-  Cpu
+  ExternalLink,
+  Navigation,
+  Sparkles
 } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-24 lg:py-40 bg-white">
+    <section id="contact" className="relative py-16 sm:py-24 lg:py-32 bg-slate-50/70 text-slate-900 font-sans">
       
-      {/* ── BACKGROUND BLUEPRINT GRID ── */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none scientific-grid z-0" />
+      {/* Ambient Background Glows */}
+      <div className="absolute top-10 right-10 w-[500px] h-[500px] bg-emerald-100/50 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
         
-        {/* ── INSTITUTIONAL HEADER ── */}
-        <div className="flex flex-col lg:flex-row justify-between items-baseline gap-12 mb-20 lg:mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl"
-          >
-             <div className="flex items-center gap-3 mb-8">
-                <div className="w-8 h-[1px] bg-brand-green" />
-                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue/30">Engagement Protocol</span>
-             </div>
-             <h2 className="text-4xl lg:text-6xl font-black text-brand-blue tracking-tighter leading-none mb-10">
-                Institutional <br />
-                <span className="text-brand-green italic font-light">Global Nexus.</span>
-             </h2>
-             <p className="text-base lg:text-lg text-gray-400 font-light leading-relaxed">
-                Initiating secure professional pharmaceutical partnerships through our standardized B2B engagement framework.
-             </p>
-          </motion.div>
+        {/* ── 1. INSTITUTIONAL HEADER ── */}
+        <div className="w-full mb-12 sm:mb-16 border-b border-slate-200/80 pb-10 text-left">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+            <div className="space-y-4 max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 shadow-xs"
+              >
+                <Globe2 className="w-3.5 h-3.5 text-emerald-600" />
+                <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em]">
+                  Global Engagement Desk
+                </span>
+              </motion.div>
 
-          <div className="flex items-center gap-8">
-             <div className="text-right">
-                <span className="text-[9px] font-black uppercase tracking-widest text-brand-blue/20 block mb-2">Protocol Response</span>
-                <span className="text-sm font-bold text-brand-green tracking-tight uppercase px-4 py-2 bg-brand-green/5 border border-brand-green/10 rounded-full">Active Monitoring</span>
-             </div>
-             <div className="w-12 h-12 bg-brand-blue/5 rounded-2xl flex items-center justify-center text-brand-blue">
-                <Cpu className="w-5 h-5 animate-pulse" />
-             </div>
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight">
+                Corporate Headquarters <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">& Global Reach</span>
+              </h1>
+
+              <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-2xl">
+                Visit or connect with Mythron Pharma&apos;s strategic headquarters in Hyderabad for formulation licensing, CDMO manufacturing, and clinical distribution.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3.5 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm self-start lg:self-end">
+              <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+              <div>
+                <p className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Headquarters Status</p>
+                <p className="text-xs font-black text-slate-900 uppercase">Operational & Active Desk</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* ── THE DOSSIER GRID ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32 items-start">
-           
-           {/* LEFT: DATA MODULES */}
-           <div className="lg:col-span-5 space-y-12">
+        {/* ── 2. TWO COLUMN LAYOUT: TOUCHPOINTS & LIVE GOOGLE MAP ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch mb-12">
+          
+          {/* LEFT: CORPORATE TOUCHPOINTS (5 cols) */}
+          <div className="lg:col-span-5 space-y-6 flex flex-col justify-between">
+            
+            {/* Headquarters Card */}
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg space-y-6 relative overflow-hidden">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center shrink-0">
+                  <Building2 className="w-6 h-6 stroke-[2.2]" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Corporate HQ</span>
+                  <h3 className="text-xl font-black text-slate-900 tracking-tight">Hyderabad Innovation Nexus</h3>
+                </div>
+              </div>
+
+              <div className="space-y-4 pt-2">
+                <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
+                  <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Phase 2, HITEC City, Hyderabad, Telangana 500081, India</span>
+                </div>
+                <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-600">
+                  <Clock className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Mon - Fri: 09:00 - 18:00 IST</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Direct Channel Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Official Email</p>
+                <a href="mailto:info@mythronpharma.com" className="text-xs font-black text-slate-900 uppercase hover:text-emerald-600 transition-colors">
+                  info@mythronpharma.com
+                </a>
+              </div>
+
+              <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-emerald-400 hover:shadow-md transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Direct Desk</p>
+                <a href="tel:+914048592900" className="text-xs font-black text-slate-900 uppercase hover:text-emerald-600 transition-colors">
+                  +91 40 4859 2900
+                </a>
+              </div>
+            </div>
+
+            {/* Compliance Verified Banner */}
+            <div className="bg-gradient-to-r from-emerald-50 via-teal-50 to-cyan-50 p-6 rounded-3xl border border-emerald-200/80 flex items-center justify-between shadow-xs">
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                <div>
+                  <p className="text-xs font-black text-slate-900 uppercase tracking-wider">WHO-GMP & ISO Certified Facility</p>
+                  <p className="text-[11px] text-slate-500">Class-100 Cleanroom & R&D Laboratory</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT: LIVE INTERACTIVE GOOGLE MAPS INTEGRATION (7 cols) */}
+          <div className="lg:col-span-7 h-full min-h-[480px]">
+            <div className="bg-white p-3.5 rounded-3xl border border-slate-200 shadow-xl h-full flex flex-col justify-between relative group overflow-hidden">
               
-              {/* HQ Module */}
-              <div className="p-10 bg-[#fafafa] border border-gray-100 rounded-[3rem]">
-                 <div className="flex items-center gap-4 mb-10">
-                    <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-blue shadow-sm border border-gray-50">
-                       <Building2 className="w-4 h-4" />
-                    </div>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-brand-blue">Corporate Headquarters</span>
-                 </div>
-                 
-                 <div className="flex gap-6">
-                    <div>
-                       <p className="text-xl font-bold text-brand-blue mb-2 tracking-tight">Hyderabad Nexus</p>
-                       <p className="text-sm text-gray-400 leading-relaxed font-light">
-                          Phase 2, HITEC City, Telangana State, India <br />
-                          <span className="text-[10px] font-mono mt-3 block text-brand-blue/30 tracking-widest uppercase">Coordinates: 17.448° N, 78.391° E</span>
-                       </p>
-                    </div>
-                 </div>
+              {/* Map Header Status Bar */}
+              <div className="flex items-center justify-between p-3.5 mb-2 bg-slate-50 rounded-2xl border border-slate-100">
+                <div className="flex items-center gap-2.5">
+                  <Navigation className="w-4 h-4 text-emerald-600" />
+                  <span className="text-xs font-black text-slate-900 uppercase tracking-wider">
+                    Live GPS Location Matrix
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono font-extrabold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                  17.448° N, 78.391° E
+                </span>
               </div>
 
-              {/* Secure Channels */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                 <div className="p-8 bg-white border border-gray-50 rounded-[2.5rem] shadow-sm hover:border-brand-blue/20 transition-colors group">
-                    <Mail className="w-4 h-4 text-brand-green mb-4 group-hover:scale-110 transition-transform" />
-                    <p className="text-[9px] font-black uppercase tracking-widest text-brand-blue/20 mb-1">Secure Email</p>
-                    <p className="text-sm font-bold text-brand-blue uppercase tracking-tight font-mono">info@mythronpharma.com</p>
-                 </div>
-                 <div className="p-8 bg-white border border-gray-50 rounded-[2.5rem] shadow-sm hover:border-brand-blue/20 transition-colors group">
-                    <Phone className="w-4 h-4 text-brand-green mb-4 group-hover:scale-110 transition-transform" />
-                    <p className="text-[9px] font-black uppercase tracking-widest text-brand-blue/20 mb-1">Clinical Support</p>
-                    <p className="text-sm font-bold text-brand-blue uppercase tracking-tight">+91 40 0000 0000</p>
-                 </div>
+              {/* Embedded Interactive Google Map */}
+              <div className="w-full flex-1 min-h-[380px] sm:min-h-[440px] rounded-2xl overflow-hidden relative border border-slate-200/80 shadow-inner">
+                <iframe
+                  title="Mythron Pharma Headquarters Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.311756534575!2d78.3792004!3d17.4475517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557ef059!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana%20500081!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full min-h-[380px] sm:min-h-[440px] grayscale-[20%] contrast-[105%] hover:grayscale-0 transition-all duration-500"
+                />
+
+                {/* Direct Google Maps Action Overlay */}
+                <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md p-2.5 rounded-xl border border-slate-200 shadow-lg">
+                  <a
+                    href="https://maps.google.com/?q=HITEC+City+Hyderabad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-black text-slate-900 uppercase hover:text-emerald-600 transition-colors"
+                  >
+                    <span>Open Full Map</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />
+                  </a>
+                </div>
               </div>
 
-              {/* Compliance Verification */}
-              <div className="p-6 bg-brand-blue/5 border border-brand-blue/10 rounded-3xl flex items-center justify-between">
-                 <div className="flex items-center gap-4">
-                    <ShieldCheck className="w-5 h-5 text-brand-green" />
-                    <span className="text-[10px] font-bold text-brand-blue uppercase tracking-widest leading-none">Global Partner Compliance Verified</span>
-                 </div>
-                 <Globe2 className="w-4 h-4 text-brand-blue/20" />
-              </div>
+            </div>
+          </div>
 
-           </div>
-
-           {/* RIGHT: INQUIRY CONSOLE */}
-           <div className="lg:col-span-7">
-              <div className="bg-[#fafafa] border border-gray-100 rounded-[3rem] p-10 lg:p-16">
-                 <div className="mb-12">
-                    <span className="text-[9px] font-black text-brand-green uppercase tracking-[0.4em] mb-4 block">Form Protocol 01-C</span>
-                    <h4 className="text-2xl font-bold text-brand-blue tracking-tight">Analytical Inquiry Console.</h4>
-                 </div>
-                 
-                 <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="flex flex-col gap-3">
-                       <label className="text-[9px] font-black uppercase tracking-[0.2em] text-brand-blue/30 px-2">Official Name</label>
-                       <input 
-                         type="text" 
-                         className="w-full bg-white border border-gray-100 py-4 px-8 rounded-2xl text-sm focus:outline-none focus:border-brand-blue/40 transition-all font-light"
-                         placeholder="Enter credentials"
-                       />
-                    </div>
-                    <div className="flex flex-col gap-3">
-                       <label className="text-[9px] font-black uppercase tracking-[0.2em] text-brand-blue/30 px-2">Institutional Email</label>
-                       <input 
-                         type="email" 
-                         className="w-full bg-white border border-gray-100 py-4 px-8 rounded-2xl text-sm focus:outline-none focus:border-brand-blue/40 transition-all font-light"
-                         placeholder="nexus@domain.com"
-                       />
-                    </div>
-                    <div className="flex flex-col gap-3 md:col-span-2">
-                       <label className="text-[9px] font-black uppercase tracking-[0.2em] text-brand-blue/30 px-2">Dossier Details</label>
-                       <textarea 
-                         rows={4}
-                         className="w-full bg-white border border-gray-100 py-6 px-8 rounded-3xl text-sm focus:outline-none focus:border-brand-blue/40 transition-all font-light resize-none"
-                         placeholder="Provide a clinical brief..."
-                       />
-                    </div>
-                    <div className="md:col-span-2 pt-4">
-                       <button className="group flex items-center gap-6 bg-brand-blue text-white px-12 py-5 rounded-full font-bold uppercase tracking-[0.3em] text-[10px] shadow-2xl shadow-brand-blue/20 hover:bg-brand-blue/90 transition-all">
-                          Transmit Protocol
-                          <ArrowRight className="w-5 h-5 text-brand-green group-hover:translate-x-2 transition-transform" />
-                       </button>
-                    </div>
-                 </form>
-              </div>
-           </div>
-
-        </div>
-
-        {/* ── FOOTER NEXUS MAP ── */}
-        <div className="mt-32 lg:mt-40 rounded-[3rem] overflow-hidden border border-gray-100 group shadow-sm bg-white relative">
-           <div className="aspect-[21/9] lg:aspect-[3/1] w-full relative">
-              <img src="/hq-map.png" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105" alt="Institutional Nexus" />
-              <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none" />
-           </div>
-           
-           <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row justify-between items-end gap-6 pointer-events-none">
-              <div className="p-8 bg-white/90 backdrop-blur-xl border border-gray-100 rounded-3xl shadow-2xl max-w-sm pointer-events-auto border-white/20">
-                 <p className="text-[10px] font-black text-brand-blue tracking-[0.4em] uppercase mb-4">Location Matrix</p>
-                 <p className="text-sm text-gray-400 font-light leading-relaxed mb-6">
-                    Our global strategic headquarters is located in the pharmaceutical hub of Hyderabad.
-                 </p>
-                 <div className="flex items-center gap-4 text-[9px] font-black text-brand-blue uppercase tracking-widest cursor-pointer hover:gap-6 transition-all group/link">
-                    Initiate Navigation Nexus
-                    <ArrowRight className="w-4 h-4 text-brand-green group-hover/link:translate-x-1 transition-transform" />
-                 </div>
-              </div>
-              <div className="p-4 bg-brand-blue text-white rounded-2xl flex items-center gap-4 shadow-2xl pointer-events-auto mb-4">
-                 <Globe2 className="w-5 h-5" />
-                 <span className="text-[9px] font-bold uppercase tracking-widest">Global Export Authorized</span>
-              </div>
-           </div>
         </div>
 
       </div>
-
-      <style jsx global>{`
-        .scientific-grid {
-          background-image: 
-            linear-gradient(to right, #103067 1px, transparent 1px),
-            linear-gradient(to bottom, #103067 1px, transparent 1px);
-          background-size: 100px 100px;
-        }
-      `}</style>
-
     </section>
   );
 }

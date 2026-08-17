@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FlaskConical, Beaker, ShieldCheck, ArrowRight, Zap, Microscope, BookOpen, Activity, ChevronRight } from "lucide-react";
+import { FlaskConical, Zap, Microscope, ChevronRight } from "lucide-react";
 
 const phases = [
   {
@@ -31,51 +31,62 @@ const insights = [
   {
     category: "White Paper",
     title: "Catalytic Synthesis in 2027: The Modular Cleanroom Revolution",
-    image: "/insight-molecular.png",
-    grid: "md:col-span-2 md:row-span-2"
+    image: "/dossier-synthesis.png",
+    grid: "md:col-span-2"
   },
   {
     category: "Case Study",
-    title: "Bio-Equivalence Benchmarks",
-    image: "/hero-professional.png",
-    grid: "md:col-span-1 md:row-span-1"
+    title: "Bio-Equivalence Benchmarks in Clinical Formulations",
+    image: "/dossier-bioequivalence.png",
+    grid: "md:col-span-1"
   },
   {
-    category: "Report",
-    title: "Robot Stability",
-    image: "/insight-molecular.png",
-    grid: "md:col-span-1 md:row-span-1"
+    category: "R&D Report",
+    title: "Robotic Assembly Batch Stability Protocols",
+    image: "/dossier-robotics.png",
+    grid: "md:col-span-1"
+  },
+  {
+    category: "Quality Dossier",
+    title: "WHO-GMP Cleanroom Verification & Safety Analytics",
+    image: "/dossier-gmp.png",
+    grid: "md:col-span-2"
   }
 ];
 
 export default function Manufacturing() {
   return (
-    <section id="insights" className="py-24 lg:py-32 bg-white">
-      <div className="max-w-[1600px] mx-auto px-6">
+    <section id="insights" className="py-16 sm:py-24 lg:py-32 bg-slate-50/60 relative overflow-hidden border-b border-slate-100">
+      
+      {/* Soft Ambient Background Accent Glows */}
+      <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-emerald-100/40 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-0 w-[400px] h-[400px] bg-teal-100/30 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
         
-        {/* ── HEADER: SURGICAL PRECISION ── */}
-        <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
-          <div className="max-w-2xl">
+        {/* ── HEADER (LEFT ALIGNED WIDE) ── */}
+        <div className="w-full mb-12 sm:mb-16 border-b border-slate-200/80 pb-6 sm:pb-8 text-left flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="space-y-3">
             <motion.div
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-brand-green font-black tracking-[0.4em] text-[10px] uppercase mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80"
             >
-              Institutional Integrity
+              <Zap className="w-3.5 h-3.5 text-emerald-600" />
+              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-800">Advanced Infrastructure</span>
             </motion.div>
-            <h2 className="text-5xl lg:text-7xl font-black text-brand-blue leading-[0.9] tracking-tighter">
-              Precision <br />
-              <span className="text-brand-green">Infrastructure.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+              Manufacturing & <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">R&D Capabilities</span>
             </h2>
           </div>
-          <p className="text-lg text-gray-400 font-light max-w-sm leading-relaxed">
-            Defining the next generation of purity through computational chemistry and robotic synthesis.
+          <p className="text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-md leading-relaxed">
+            Defining the next generation of formulation purity through automated robotic synthesis, closed-loop cleanrooms, and predictive chemistry.
           </p>
         </div>
 
         {/* ── PHASES: HIGH PERFORMANCE GRID ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20 sm:mb-28">
           {phases.map((phase, i) => (
             <motion.div
               key={i}
@@ -83,63 +94,82 @@ export default function Manufacturing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group bg-gray-50/50 p-10 lg:p-14 rounded-[3rem] border border-transparent hover:border-brand-blue/10 hover:bg-white hover:shadow-2xl transition-all duration-500 will-change-transform"
+              className="group bg-white p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-lg hover:shadow-2xl hover:border-emerald-400/60 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden flex flex-col justify-between"
             >
-              <div className="flex justify-between items-start mb-12">
-                 <div className="w-16 h-16 rounded-2xl bg-brand-blue flex items-center justify-center text-white shadow-lg shadow-brand-blue/20">
-                    <phase.icon className="w-7 h-7" />
-                 </div>
-                 <span className="text-[10px] font-black tracking-widest text-brand-blue/20">{phase.tagline}</span>
+              <div className="absolute top-0 right-0 w-28 h-28 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 rounded-bl-3xl group-hover:scale-110 transition-transform pointer-events-none" />
+              
+              <div>
+                <div className="flex justify-between items-center mb-8">
+                  <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                    <phase.icon className="w-6 h-6 stroke-[2]" />
+                  </div>
+                  <span className="text-[10px] sm:text-[11px] font-black tracking-widest text-emerald-700 px-3 py-1 bg-emerald-50 rounded-full border border-emerald-200/70">
+                    {phase.tagline}
+                  </span>
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-3 tracking-tight group-hover:text-emerald-600 transition-colors">
+                  {phase.title}
+                </h3>
+                <p className="text-slate-600 font-normal text-xs sm:text-sm leading-relaxed mb-8">
+                  {phase.desc}
+                </p>
               </div>
-              <h3 className="text-2xl font-black text-brand-blue mb-4 tracking-tight">{phase.title}</h3>
-              <p className="text-gray-400 font-medium text-sm leading-relaxed mb-10">{phase.desc}</p>
-              <div className="flex items-center justify-between pt-8 border-t border-gray-100">
-                 <div className="text-[10px] font-black uppercase text-brand-green tracking-widest">{phase.metric}</div>
-                 <ChevronRight className="w-4 h-4 text-brand-blue/20 group-hover:text-brand-blue transition-colors" />
+
+              <div className="flex items-center justify-between pt-6 border-t border-slate-100 mt-auto">
+                <div className="text-[10px] sm:text-[11px] font-black uppercase text-emerald-600 tracking-widest flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                  {phase.metric}
+                </div>
+                <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* ── INSIGHTS: BENTO ARCHIVE ── */}
-        <div className="space-y-12">
-          <div className="flex items-center justify-between">
-             <h3 className="text-3xl font-black text-brand-blue tracking-tighter">Scientific <span className="text-brand-green italic font-light">Dossier</span></h3>
-             <div className="h-px flex-grow mx-12 bg-gray-50 hidden md:block" />
-             <button className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-blue/40 border border-gray-100 px-8 py-4 rounded-full hover:bg-brand-blue hover:text-white transition-all">
-                Full Archive
-             </button>
+        <div className="space-y-8 sm:space-y-10">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
+              Scientific <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 italic font-medium">Dossier & Papers</span>
+            </h3>
+            <div className="hidden md:block h-px flex-grow mx-8 bg-slate-200/80" />
+            <button className="w-fit text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-slate-900 bg-white border border-slate-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-xs">
+              Full Archive
+            </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-1 md:grid-rows-2 gap-6 h-auto">
-             {insights.map((insight, i) => (
-               <motion.div
-                 key={i}
-                 initial={{ opacity: 0, scale: 0.98 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
-                 viewport={{ once: true }}
-                 transition={{ delay: i * 0.1 }}
-                 className={`relative rounded-[2rem] overflow-hidden group cursor-pointer border border-gray-50 ${insight.grid} ${insight.grid.includes('col-span-2') ? 'min-h-[380px]' : 'min-h-[300px]'}`}
-               >
-                 <img 
-                   src={insight.image} 
-                   className="absolute inset-0 w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110" 
-                   alt={insight.title} 
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-blue/20 to-transparent p-10 flex flex-col justify-between" />
-                 
-                 <div className="relative z-10 h-full p-6 md:p-10 flex flex-col justify-between">
-                    <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 w-fit">
-                       <span className="text-[8px] font-bold text-white uppercase tracking-widest">{insight.category}</span>
-                    </div>
-                    <div>
-                       <h4 className={`font-bold text-white leading-[1.1] group-hover:text-brand-green transition-colors ${insight.grid.includes('col-span-2') ? 'text-2xl md:text-4xl max-w-xl' : 'text-lg md:text-xl'}`}>
-                          {insight.title}
-                       </h4>
-                    </div>
-                 </div>
-               </motion.div>
-             ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {insights.map((insight, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className={`relative rounded-2xl sm:rounded-3xl overflow-hidden group cursor-pointer border border-slate-200/90 shadow-md ${insight.grid} h-[280px] sm:h-[320px] lg:h-[360px]`}
+              >
+                <img 
+                  src={insight.image} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  alt={insight.title} 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
+                
+                <div className="relative z-10 h-full p-6 sm:p-8 flex flex-col justify-between">
+                  <div className="bg-emerald-500/20 backdrop-blur-md px-3.5 py-1 rounded-full border border-emerald-400/30 w-fit">
+                    <span className="text-[9px] sm:text-[10px] font-black text-emerald-300 uppercase tracking-widest">
+                      {insight.category}
+                    </span>
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-white leading-snug text-lg sm:text-xl lg:text-2xl group-hover:text-emerald-300 transition-colors">
+                      {insight.title}
+                    </h4>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 

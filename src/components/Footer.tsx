@@ -1,73 +1,80 @@
 "use client";
 
 import Link from "next/link";
-import { ShieldCheck, MapPin, Phone, Mail } from "lucide-react";
-
-const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Values", href: "#values" },
-  { name: "Portfolio", href: "/products" },
-  { name: "Clinical", href: "#why-us" },
-  { name: "Connect", href: "/connect" },
-];
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-100 pt-20 pb-10 overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center text-center">
-        
-        {/* ── BRAND ANCHOR ── */}
-        <Link href="/" className="inline-block mb-8 hover:opacity-80 transition-opacity">
-           <img
-             src="/logo-main.png"
-             alt="Mythron Pharma"
-             className="h-12 w-auto object-contain mx-auto"
-           />
-        </Link>
+    <footer className="bg-white text-slate-900 border-t border-slate-200/90 pt-12 sm:pt-16 pb-12 sm:pb-16 relative">
+      <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16">
 
-        {/* ── CENTRAL NAVIGATION ── */}
-        <nav className="mb-10 w-full">
-           <ul className="flex flex-wrap justify-center gap-x-10 gap-y-4">
-              {navLinks.map(link => (
-                <li key={link.name}>
-                   <Link href={link.href} className="text-[11px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-brand-blue transition-colors">
-                      {link.name}
-                   </Link>
-                </li>
-              ))}
-           </ul>
-        </nav>
+        {/* ── MAIN FOOTER LAYOUT ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 pb-10 sm:pb-12 border-b border-slate-200/80">
 
-        {/* ── COMPACT CLINICAL CONTACTS ── */}
-        <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12 border-y border-gray-50 py-8 w-full max-w-4xl">
-           <div className="flex items-center gap-2 group cursor-default">
-              <MapPin className="w-3.5 h-3.5 text-brand-blue/30 group-hover:text-brand-blue transition-colors" />
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Hyderabad, Telangana</span>
-           </div>
-           <div className="flex items-center gap-2 group cursor-default">
-              <Phone className="w-3.5 h-3.5 text-brand-blue/30 group-hover:text-brand-blue transition-colors" />
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">+91 40 4859 2900</span>
-           </div>
-           <div className="flex items-center gap-2 group cursor-default">
-              <Mail className="w-3.5 h-3.5 text-brand-blue/30 group-hover:text-brand-blue transition-colors" />
-              <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest text-brand-blue">info@mythronpharma.com</span>
-           </div>
+          {/* Column 1: Brand & Overview (Centered for mobile and desktop) */}
+          <div className="sm:col-span-2 lg:col-span-6 space-y-4 text-center flex flex-col items-center">
+            <div className="w-full py-1 text-center flex justify-center">
+              <Link href="/" className="inline-block">
+                <img
+                  src="/logo-main.png"
+                  alt="Mythron Pharma"
+                  className="h-12 md:h-14 w-auto object-contain scale-[1.7] md:scale-[1.8] origin-center block transition-transform hover:scale-[1.85] mx-auto my-2"
+                />
+              </Link>
+            </div>
+
+            <p className="text-slate-600 lg:text-slate-500 text-xs sm:text-sm font-normal leading-relaxed max-w-md text-center mx-auto">
+              Mythron Pharma Private Limited is an agile biopharmaceutical startup dedicated to targeted formulations, therapeutic precision, and quality excellence.
+            </p>
+          </div>
+
+          {/* Column 2: Navigation Links (Spans 1 col on sm, 3 cols on lg) */}
+          <div className="sm:col-span-1 lg:col-span-3 space-y-3 sm:space-y-4 text-left">
+            <h4 className="text-[11px] sm:text-xs font-bold text-slate-900 uppercase tracking-widest">
+              Navigation
+            </h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
+              <li><Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link></li>
+              <li><Link href="/products" className="hover:text-emerald-600 transition-colors">Formulations Portfolio</Link></li>
+              <li><Link href="/why-us" className="hover:text-emerald-600 transition-colors">Quality Framework</Link></li>
+              <li><Link href="/values" className="hover:text-emerald-600 transition-colors">Scientific Heritage</Link></li>
+              <li><Link href="/connect" className="hover:text-emerald-600 transition-colors">Connect</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Corporate HQ & Contact (Spans 1 col on sm, 3 cols on lg) */}
+          <div className="sm:col-span-1 lg:col-span-3 space-y-3 sm:space-y-4 text-left">
+            <h4 className="text-[11px] sm:text-xs font-bold text-slate-900 uppercase tracking-widest">
+              Corporate HQ
+            </h4>
+            <div className="space-y-3 text-xs sm:text-sm text-slate-600">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span className="leading-relaxed">HITEC City, Phase 2, Hyderabad, Telangana 500081, India</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span className="text-slate-800 font-semibold whitespace-nowrap">+91 40 4859 2900</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
+                <a href="mailto:info@mythronpharma.com" className="text-emerald-600 font-bold hover:underline">
+                  info@mythronpharma.com
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        {/* ── INSTITUTIONAL BADGE ── */}
-        <div className="flex items-center gap-3 px-5 py-2 bg-gray-50 border border-gray-100 rounded-full mb-10">
-           <ShieldCheck className="w-4 h-4 text-brand-green" />
-           <span className="text-[9px] font-black uppercase tracking-[0.3em] text-brand-blue/40">WHO-GMP & ISO 9001 Certified Institution</span>
-        </div>
-
-        {/* ── LEGAL ── */}
-        <div className="flex flex-col items-center gap-4 text-[9px] font-bold text-gray-300 uppercase tracking-[0.25em]">
-           <p>© {new Date().getFullYear()} Mythron Pharma Private Limited. All Scientific Rights Reserved.</p>
-           <div className="flex gap-8">
-              <Link href="#" className="hover:text-brand-blue transition-colors">Privacy</Link>
-              <Link href="#" className="hover:text-brand-blue transition-colors">Compliance</Link>
-              <Link href="#" className="hover:text-brand-blue transition-colors">Liability</Link>
-           </div>
+        {/* ── FOOTER BOTTOM BAR ── */}
+        <div className="pt-6 sm:pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+          <p>© {new Date().getFullYear()} Mythron Pharma Private Limited. All Rights Reserved.</p>
+          <div className="flex flex-wrap gap-4 sm:gap-6 text-slate-500 text-xs">
+            <Link href="#" className="hover:text-emerald-600 transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-emerald-600 transition-colors">Terms of Compliance</Link>
+            <Link href="#" className="hover:text-emerald-600 transition-colors">Quality Guidelines</Link>
+          </div>
         </div>
 
       </div>
