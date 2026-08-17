@@ -79,7 +79,7 @@ export default function Contact() {
               <div className="space-y-4 pt-2">
                 <div className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
                   <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Phase 2, HITEC City, Hyderabad, Telangana 500081, India</span>
+                  <span>PLOT NO.373, HOUSE. NO. 2-23-358, HMT HIILS, OPP JNTU, KUKATPALLY, HYDERABAD - 500 085</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-600">
                   <Clock className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -137,7 +137,7 @@ export default function Contact() {
                   </span>
                 </div>
                 <span className="text-[10px] font-mono font-extrabold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                  17.448° N, 78.391° E
+                  17.493° N, 78.389° E
                 </span>
               </div>
 
@@ -145,7 +145,7 @@ export default function Contact() {
               <div className="w-full flex-1 min-h-[380px] sm:min-h-[440px] rounded-2xl overflow-hidden relative border border-slate-200/80 shadow-inner">
                 <iframe
                   title="Mythron Pharma Headquarters Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.311756534575!2d78.3792004!3d17.4475517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557ef059!2sHITEC%20City%2C%20Hyderabad%2C%20Telangana%20500081!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.3023193245086!2d78.3888806!3d17.4931899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f3a2c5a0bd%3A0x286ecad462445e0d!2sHMT%20Hills%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500085!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -158,7 +158,7 @@ export default function Contact() {
                 {/* Direct Google Maps Action Overlay */}
                 <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-md p-2.5 rounded-xl border border-slate-200 shadow-lg">
                   <a
-                    href="https://maps.google.com/?q=HITEC+City+Hyderabad"
+                    href="https://maps.google.com/?q=HMT+Hills+Opp+JNTU+Kukatpally+Hyderabad+500085"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-black text-slate-900 uppercase hover:text-emerald-600 transition-colors"

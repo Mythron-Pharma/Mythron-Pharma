@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="space-y-3 text-xs sm:text-sm text-slate-600">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span className="leading-relaxed">HITEC City, Phase 2, Hyderabad, Telangana 500081, India</span>
+                <span className="leading-relaxed">PLOT NO.373, HOUSE. NO. 2-23-358, HMT HIILS, OPP JNTU, KUKATPALLY, HYDERABAD - 500 085</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
