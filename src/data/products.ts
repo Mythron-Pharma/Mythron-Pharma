@@ -31,7 +31,7 @@ export const products: Product[] = [
     focus: "AMOXYCILLIN & POTASSIUM CLAVULANATE",
     tagline: "Strong Action. Superior Protection.",
     description: "MYTHCLAV LB 625 is a high-potency broad-spectrum antibiotic formulation combining Amoxycillin 500 mg and Potassium Clavulanate 125 mg IP. Engineered to combat resistant bacterial pathogens, it delivers targeted clinical efficacy for respiratory, urinary, and soft tissue infections with a high safety and tolerance profile.",
-    image: "/prod-mythclav.jpg",
+    image: "/prod-mythclav.png",
     benefits: [
       "Broad spectrum antibiotic action against resistant bacterial strains",
       "High efficacy in Respiratory, Urinary, and ENT infections",
