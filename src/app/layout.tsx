@@ -19,7 +19,9 @@ export const metadata: Metadata = {
   title: "Mythron Pharma | Scientific Precision",
   description: "Advancing health through scientific precision. The trusted partner for healthcare professionals globally.",
   icons: {
-    icon: "/mythron-logo.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
