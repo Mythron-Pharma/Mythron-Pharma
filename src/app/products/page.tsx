@@ -228,11 +228,11 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Product Render Display Stage */}
-                <div className="relative h-72 sm:h-80 w-full bg-slate-50/90 rounded-2xl border border-slate-100 flex items-center justify-center p-2 mb-6 group overflow-hidden">
+                <div className="relative h-72 sm:h-80 w-full bg-slate-50/90 rounded-2xl border border-slate-100 flex items-center justify-center p-4 mb-6 group overflow-hidden">
                   <img
                     src={activeProduct.image || "/pharma-bottle.png"}
                     alt={activeProduct.name}
-                    className="w-full h-full object-contain scale-[1.35] transition-transform duration-500 group-hover:scale-[1.45] mix-blend-multiply"
+                    className="max-h-[92%] max-w-[92%] w-auto h-auto object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 text-[10px] font-black text-slate-800 uppercase tracking-wider">
                     {activeProduct.category}
@@ -298,11 +298,11 @@ export default function ProductsPage() {
                 </div>
 
                 {/* Product Image Box */}
-                <div className="h-60 w-full bg-slate-50/90 rounded-2xl border border-slate-100 flex items-center justify-center p-2 mb-5 relative overflow-hidden">
+                <div className="h-60 w-full bg-slate-50/90 rounded-2xl border border-slate-100 flex items-center justify-center p-4 mb-5 relative overflow-hidden">
                   <img
                     src={p.image || "/pharma-bottle.png"}
                     alt={p.name}
-                    className="w-full h-full object-contain scale-[1.3] group-hover:scale-[1.4] transition-transform duration-500 mix-blend-multiply"
+                    className="max-h-[90%] max-w-[90%] w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500 mix-blend-multiply"
                   />
                 </div>
 
