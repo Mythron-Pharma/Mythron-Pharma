@@ -21,7 +21,7 @@ export default function Products() {
             Featured <span className="text-emerald-600">Therapeutic Products</span>
           </h2>
           <p className="text-slate-600 text-sm font-normal max-w-xl">
-            Discover Mythron Pharma&apos;s advanced portfolio of metabolic, mitochondrial, and reproductive formulations.
+            Discover Mythron Pharma&apos;s advanced portfolio of anti-infective, hematology, orthopedic, and gynecological formulations.
           </p>
         </div>
 
