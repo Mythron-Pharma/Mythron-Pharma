@@ -47,7 +47,7 @@ export default function Products() {
               className="group bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(16,185,129,0.15)] hover:border-emerald-500/50 transition-all duration-500 flex flex-col justify-between"
             >
               {/* Product Photo Showcase */}
-              <div className="relative aspect-[4/3] bg-gradient-to-b from-slate-50 to-white p-8 flex items-center justify-center overflow-hidden border-b border-slate-100">
+              <div className="relative aspect-[4/3] bg-gradient-to-b from-slate-50 to-white p-2 flex items-center justify-center overflow-hidden border-b border-slate-100">
                 <div className="absolute inset-0 bg-[radial-gradient(#10B981_1px,transparent_1px)] opacity-[0.05] [background-size:16px_16px]" />
                 
                 {/* Category Badge */}
@@ -60,7 +60,7 @@ export default function Products() {
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="max-h-48 w-auto object-contain drop-shadow-xl group-hover:scale-108 transition-transform duration-700 relative z-10"
+                  className="w-full h-full object-contain scale-[1.3] group-hover:scale-[1.4] transition-transform duration-500 relative z-10 mix-blend-multiply"
                 />
               </div>
 

@@ -82,12 +82,12 @@ export default function ProductDetailPage() {
             {/* Specimen Visual Area - Order 2 on Mobile */}
             <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center lg:justify-start w-full">
                <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} className="relative group w-full">
-                  <div className="aspect-[4/3] bg-white rounded-[2.5rem] lg:rounded-[3rem] border border-slate-200 shadow-xl flex items-center justify-center p-8 lg:p-12 relative">
+                  <div className="aspect-[4/3] bg-white rounded-[2.5rem] lg:rounded-[3rem] border border-slate-200 shadow-xl flex items-center justify-center p-3 lg:p-4 relative overflow-hidden">
                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 rounded-[2.5rem] lg:rounded-[3rem]" />
                      <motion.img 
                        src={product.image}
                        alt={product.name}
-                       className="relative z-10 max-h-[260px] lg:max-h-[420px] w-auto drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
+                       className="relative z-10 max-h-[320px] lg:max-h-[460px] w-full object-contain scale-[1.3] transition-transform duration-700 group-hover:scale-[1.38] mix-blend-multiply"
                      />
                   </div>
                   {/* Verification Badge */}
