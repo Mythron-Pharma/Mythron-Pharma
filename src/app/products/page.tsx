@@ -18,7 +18,7 @@ import {
 import Link from "next/link";
 import { products, Product } from "@/data/products";
 
-const categories = ["All", "Anti-Infective", "Hematology", "Orthopedics", "Gynecological Care"];
+const categories = ["All", "Gynecology"];
 
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("All");

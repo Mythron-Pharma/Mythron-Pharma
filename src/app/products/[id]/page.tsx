@@ -53,9 +53,17 @@ export default function ProductDetailPage() {
             {/* Content Stage - Order 1 on Mobile */}
             <div className="lg:col-span-7 order-1 lg:order-2 px-2 sm:px-0">
                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                  <div className="inline-flex items-center gap-3 bg-emerald-50 px-4 py-1.5 lg:px-5 lg:py-2 rounded-full mb-6 lg:mb-10 border border-emerald-200">
-                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                     <span className="text-emerald-700 font-black tracking-[0.2em] uppercase text-[9px] lg:text-[10px]">{product.focus}</span>
+                  <div className="flex flex-wrap items-center gap-3 mb-6 lg:mb-10">
+                     <div className="inline-flex items-center gap-2 bg-emerald-50 px-4 py-1.5 lg:px-5 lg:py-2 rounded-full border border-emerald-200">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                        <span className="text-emerald-700 font-black tracking-[0.2em] uppercase text-[9px] lg:text-[10px]">{product.category} Formulation</span>
+                     </div>
+                     {product.packing && (
+                       <div className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-1.5 lg:px-5 lg:py-2 rounded-full shadow-sm">
+                          <span className="text-[9px] lg:text-[10px] font-black uppercase tracking-widest text-emerald-400">Packing:</span>
+                          <span className="text-[9px] lg:text-[10px] font-extrabold uppercase tracking-wider">{product.packing}</span>
+                       </div>
+                     )}
                   </div>
 
                   <h1 className="text-4xl lg:text-7xl font-sans font-black text-slate-900 mb-6 lg:mb-8 tracking-tighter leading-tight">
