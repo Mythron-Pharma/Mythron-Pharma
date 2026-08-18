@@ -95,8 +95,8 @@ export default function Contact() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Official Email</p>
-                <a href="mailto:info@mythronpharma.com" className="text-xs font-black text-slate-900 uppercase hover:text-emerald-600 transition-colors">
-                  info@mythronpharma.com
+                <a href="mailto:business@mythronpharma.in" className="text-xs font-black text-slate-900 uppercase hover:text-emerald-600 transition-colors">
+                  business@mythronpharma.in
                 </a>
               </div>
 
