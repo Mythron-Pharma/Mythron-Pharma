@@ -1,54 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FlaskConical, Zap, Microscope, ChevronRight } from "lucide-react";
+import { FlaskConical, Zap, ShieldCheck, ChevronRight } from "lucide-react";
 
 const phases = [
   {
     icon: Zap,
-    title: "Molecular Synthesis",
-    tagline: "PHASE 01",
-    desc: "Predictive chemical algorithms simulated before physical synthesis.",
-    metric: "99.9% Purity"
+    title: "Specialty Formulations",
+    tagline: "PILLAR 01",
+    desc: "Targeted gynecology, maternal health, bone wellness, and antibiotic formulations.",
+    metric: "High Efficacy"
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Assurance",
+    tagline: "PILLAR 02",
+    desc: "Formulations manufactured under strict WHO-GMP, ISO, and GLP compliant partner facilities.",
+    metric: "WHO-GMP Certified"
   },
   {
     icon: FlaskConical,
-    title: "Structural Validation",
-    tagline: "PHASE 02",
-    desc: "Rigorous bio-equivalent testing and structural analysis.",
-    metric: "ISO Certified"
-  },
-  {
-    icon: Microscope,
-    title: "Automated Scale",
-    tagline: "PHASE 03",
-    desc: "Closed-loop robotic assembly ensuring batch integrity.",
-    metric: "Global GMP"
+    title: "Reliable Distribution",
+    tagline: "PILLAR 03",
+    desc: "Robust supply chain and stockist network ensuring consistent market availability.",
+    metric: "Prompt Supply"
   }
 ];
 
 const insights = [
   {
-    category: "White Paper",
-    title: "Catalytic Synthesis in 2027: The Modular Cleanroom Revolution",
+    category: "Specialty Focus",
+    title: "GESTHRON-SR 200: Sustained Release Progesterone in Maternal Care",
     image: "/dossier-synthesis.png",
     grid: "md:col-span-2"
   },
   {
-    category: "Case Study",
-    title: "Bio-Equivalence Benchmarks in Clinical Formulations",
+    category: "Clinical Profile",
+    title: "FERMYTH-XT: Advanced Bioavailability in Iron & Folic Acid Therapy",
     image: "/dossier-bioequivalence.png",
     grid: "md:col-span-1"
   },
   {
-    category: "R&D Report",
-    title: "Robotic Assembly Batch Stability Protocols",
+    category: "Therapeutic Synergy",
+    title: "MYTHCLAV LB 625: Broad-Spectrum Protection Against Resistant Strains",
     image: "/dossier-robotics.png",
     grid: "md:col-span-1"
   },
   {
-    category: "Quality Dossier",
-    title: "WHO-GMP Cleanroom Verification & Safety Analytics",
+    category: "Bone Mineralization",
+    title: "MYTHCAL-XT: Advanced Calcium, D3 & Methylfolate Skeletal Synergy",
     image: "/dossier-gmp.png",
     grid: "md:col-span-2"
   }
@@ -74,14 +74,14 @@ export default function Manufacturing() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80"
             >
               <Zap className="w-3.5 h-3.5 text-emerald-600" />
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-800">Advanced Infrastructure</span>
+              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.14em] text-emerald-800">Therapeutic Focus & Standards</span>
             </motion.div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-              Manufacturing & <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">R&D Capabilities</span>
+              Clinical Quality & <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">Therapeutic Portfolio</span>
             </h2>
           </div>
           <p className="text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-md leading-relaxed">
-            Defining the next generation of formulation purity through automated robotic synthesis, closed-loop cleanrooms, and predictive chemistry.
+            Delivering trusted pharmaceutical formulations engineered for high bioavailability, clinical efficacy, and patient-first healthcare.
           </p>
         </div>
 
@@ -131,12 +131,12 @@ export default function Manufacturing() {
         <div className="space-y-8 sm:space-y-10">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
-              Scientific <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 italic font-medium">Dossier & Papers</span>
+              Therapeutic <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 italic font-medium">Dossiers & Literature</span>
             </h3>
             <div className="hidden md:block h-px flex-grow mx-8 bg-slate-200/80" />
-            <button className="w-fit text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-slate-900 bg-white border border-slate-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-xs">
-              Full Archive
-            </button>
+            <a href="/products" className="w-fit text-[10px] sm:text-[11px] font-black uppercase tracking-[0.18em] text-slate-900 bg-white border border-slate-300 px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all shadow-xs inline-block">
+              Explore Products
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -177,3 +177,4 @@ export default function Manufacturing() {
     </section>
   );
 }
+

@@ -44,7 +44,7 @@ export default function Contact() {
               </h1>
 
               <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-2xl">
-                Visit or connect with Mythron Pharma&apos;s strategic headquarters in Hyderabad for formulation licensing, CDMO manufacturing, and clinical distribution.
+                Visit or connect with Mythron Pharma&apos;s strategic headquarters in Hyderabad for product inquiries, stockist partnerships, and healthcare distribution.
               </p>
             </div>
 

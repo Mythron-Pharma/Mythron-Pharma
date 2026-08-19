@@ -53,20 +53,20 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/80">
               <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 shrink-0" />
               <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.14em] sm:tracking-[0.16em]">
-                Agile Biopharma Startup • Formulation Innovation
+                Specialty Pharma • Gynecological Formulations
               </span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-3 sm:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-slate-900 leading-[1.1] sm:leading-[1.08] tracking-tight">
-                Innovating Precision Therapeutics For <br className="hidden sm:block" />
+                Pioneering Advanced Therapeutic Formulations For <br className="hidden sm:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-600">
                   Modern Healthcare.
                 </span>
               </h1>
               <p className="text-slate-600 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-xl">
-                Mythron Pharma is an emerging biopharmaceutical startup dedicated to high-potency formulations in gynecology, PCOS management, mitochondrial energy, and metabolic wellness.
+                Mythron Pharma is a dedicated pharmaceutical enterprise specializing in high-potency formulations across gynecology, maternal health, bone wellness, and targeted therapeutic care.
               </p>
             </div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
                 href="/products"
                 className="w-full sm:w-auto justify-center px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-3 shadow-lg shadow-slate-900/10 transition-all duration-300 hover:scale-[1.02] active:scale-98 text-center"
               >
-                Explore Formulations
+                Explore Product Portfolio
                 <ArrowRight className="w-4 h-4" />
               </Link>
               
@@ -116,10 +116,10 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent pointer-events-none" />
                   <div className="absolute bottom-5 sm:bottom-8 left-5 sm:left-8 right-5 sm:right-8 text-white text-left z-10">
                     <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-emerald-400 block mb-1">
-                      WHO-GMP Compliant Standards
+                      Trusted By Prescribing Doctors
                     </span>
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-black leading-snug">
-                      Precision Formulation & Quality Excellence
+                      High-Efficacy Specialty Formulations
                     </h3>
                   </div>
                 </div>
@@ -140,12 +140,12 @@ export default function Hero() {
 
             <div className="space-y-1">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-emerald-600 tracking-tight">WHO-GMP</div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-500">Compliant Process</div>
+              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-500">Quality Certified</div>
             </div>
 
             <div className="space-y-1">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">R&D</div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-500">Precision Formulation</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">Gynecology</div>
+              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-500">Specialized Portfolio</div>
             </div>
 
             <div className="space-y-1">

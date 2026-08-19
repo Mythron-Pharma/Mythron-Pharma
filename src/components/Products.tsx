@@ -14,14 +14,14 @@ export default function Products() {
         <div className="space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-emerald-50 border border-emerald-200">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-800">Formulation Portfolio</span>
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-emerald-800">Gynecology & Specialty Portfolio</span>
           </div>
           
           <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
             Featured <span className="text-emerald-600">Therapeutic Products</span>
           </h2>
           <p className="text-slate-600 text-sm font-normal max-w-xl">
-            Discover Mythron Pharma&apos;s advanced portfolio of anti-infective, hematology, orthopedic, and gynecological formulations.
+            Discover Mythron Pharma&apos;s specialized portfolio of high-potency gynecological, maternal, bone wellness, and therapeutic formulations.
           </p>
         </div>
 
@@ -29,7 +29,7 @@ export default function Products() {
           href="/products"
           className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-slate-900 text-white text-xs font-bold uppercase tracking-wider hover:bg-emerald-600 transition-all shrink-0 shadow-sm"
         >
-          Explore All Products ({products.length})
+          Explore Full Catalog ({products.length})
           <ChevronRight className="w-4 h-4" />
         </Link>
       </div>

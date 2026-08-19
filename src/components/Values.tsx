@@ -7,28 +7,28 @@ const pillars = [
   {
     title: "Precision Science",
     tag: "MOLECULAR_LOGIC",
-    desc: "Rigorous molecular modeling and chemical stability across all therapeutic precursors.",
+    desc: "Rigorous evidence-based formulations and chemical stability across all therapeutic portfolios.",
     icon: Microscope,
     image: "/value-precision.png"
   },
   {
-    title: "Global Reach",
+    title: "Market Access",
     tag: "INSTITUTIONAL_REACH",
-    desc: "Optimizing supply-chain velocities to democratize access across emerging global healthcare.",
+    desc: "Optimizing supply velocities and stockist reach to make high-grade medicines readily accessible.",
     icon: Globe,
     image: "/value-reach.png"
   },
   {
     title: "Patient Focus",
     tag: "PATIENT_EQUILIBRIUM",
-    desc: "Instituting a mission of profound care translates into systemic well-being for every patient.",
+    desc: "Instituting a mission of profound care that translates into systemic wellness for every patient.",
     icon: HeartPulse,
     image: "/value-care.png"
   },
   {
-    title: "Robotic Velocity",
-    tag: "AUTOMATED_SYNTHESIS",
-    desc: "Harnessing robotic manufacturing lines to deliver consistent purity threshold outputs.",
+    title: "Clinical Trust",
+    tag: "PRESCRIBER_CONFIDENCE",
+    desc: "Delivering consistent therapeutic purity that healthcare professionals trust and recommend.",
     icon: Activity,
     image: "/hero-professional.png"
   }
@@ -61,7 +61,7 @@ export default function Values() {
               </h2>
               
               <p className="text-slate-600 text-sm lg:text-base font-normal leading-relaxed max-w-2xl">
-                 Stabilizing complex therapeutic indices through modular synthesis, automated clinical validation, and patient-first commitment.
+                 Advancing patient health through evidence-backed formulations, strict quality standards, and dedicated physician partnerships.
               </p>
            </motion.div>
         </div>

@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-600 lg:text-slate-500 text-xs sm:text-sm font-normal leading-relaxed max-w-md text-center mx-auto">
-              Mythron Pharma Private Limited is an agile biopharmaceutical startup dedicated to targeted formulations, therapeutic precision, and quality excellence.
+              Mythron Pharma Private Limited is a specialized pharmaceutical enterprise dedicated to targeted gynecological formulations, patient wellness, and quality excellence.
             </p>
           </div>
 
@@ -35,10 +35,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
               <li><Link href="/" className="hover:text-emerald-600 transition-colors">Home</Link></li>
-              <li><Link href="/products" className="hover:text-emerald-600 transition-colors">Formulations Portfolio</Link></li>
-              <li><Link href="/why-us" className="hover:text-emerald-600 transition-colors">Quality Framework</Link></li>
-              <li><Link href="/values" className="hover:text-emerald-600 transition-colors">Scientific Heritage</Link></li>
-              <li><Link href="/connect" className="hover:text-emerald-600 transition-colors">Connect</Link></li>
+              <li><Link href="/products" className="hover:text-emerald-600 transition-colors">Products Catalog</Link></li>
+              <li><Link href="/why-us" className="hover:text-emerald-600 transition-colors">Quality Standards</Link></li>
+              <li><Link href="/values" className="hover:text-emerald-600 transition-colors">Corporate Values</Link></li>
+              <li><Link href="/connect" className="hover:text-emerald-600 transition-colors">Distribution & Inquiries</Link></li>
             </ul>
           </div>
 
@@ -58,8 +58,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
-                <a href="mailto:info@mythronpharma.com" className="text-emerald-600 font-bold hover:underline">
-                  info@mythronpharma.com
+                <a href="mailto:business@mythronpharma.in" className="text-emerald-600 font-bold hover:underline">
+                  business@mythronpharma.in
                 </a>
               </div>
             </div>

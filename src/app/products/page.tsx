@@ -48,16 +48,16 @@ export default function ProductsPage() {
               >
                 <FlaskConical className="w-3.5 h-3.5 text-emerald-600" />
                 <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em]">
-                  Therapeutic Formulations Index
+                  Gynecology & Specialty Formulations
                 </span>
               </motion.div>
               
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight">
-                Targeted <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">Therapeutic Precision</span>
+                Targeted <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">Therapeutic Products</span>
               </h1>
               
               <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-2xl">
-                Clinical-grade biopharmaceutical formulations engineered for metabolic equilibrium, cellular bioenergetics, and reproductive vitality.
+                High-potency pharmaceutical formulations engineered for maternal health, iron deficiency anemia, bone mineralization, and targeted antibiotic therapy.
               </p>
             </div>
 
@@ -95,22 +95,22 @@ export default function ProductsPage() {
             <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-xs">
               <Zap className="w-5 h-5 text-emerald-600 shrink-0" />
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Bio-Availability</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Bioavailability</p>
                 <p className="text-xs font-black text-slate-900">High-Potency Yield</p>
               </div>
             </div>
             <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-xs">
               <Award className="w-5 h-5 text-emerald-600 shrink-0" />
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Clinical Testing</p>
-                <p className="text-xs font-black text-slate-900">99.9% Purity Verified</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Prescriber Trust</p>
+                <p className="text-xs font-black text-slate-900">Doctor Recommended</p>
               </div>
             </div>
             <div className="flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-slate-200/90 shadow-xs">
               <Activity className="w-5 h-5 text-emerald-600 shrink-0" />
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Targeted Spectrum</p>
-                <p className="text-xs font-black text-slate-900">Metabolic & Cellular</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Specialty Focus</p>
+                <p className="text-xs font-black text-slate-900">Gynecology Range</p>
               </div>
             </div>
           </div>

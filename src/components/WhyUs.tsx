@@ -19,59 +19,59 @@ import {
 import Link from "next/link";
 
 const stats = [
-  { label: "Molecular Purity Index", value: "99.9%", detail: "Automated batch testing" },
-  { label: "Regulatory Approvals", value: "50+", detail: "Global market readiness" },
-  { label: "Cleanroom Isolation", value: "Class 100", detail: "Zero-particle aseptic zone" },
-  { label: "Bio-Availability Yield", value: "100%", detail: "Optimized systemic intake" },
+  { label: "Therapeutic Efficacy", value: "99.9%", detail: "Prescriber-verified results" },
+  { label: "Quality Compliance", value: "100%", detail: "WHO-GMP & ISO certified" },
+  { label: "Stockist Network", value: "Active", detail: "Prompt nationwide supply" },
+  { label: "Bio-Availability Yield", value: "100%", detail: "Optimized patient absorption" },
 ];
 
 const scienceTabs = [
   {
-    id: "synthesis",
-    title: "Catalytic Synthesis",
-    subtitle: "Closed-Loop Molecular Assembly",
+    id: "formulation",
+    title: "Therapeutic Precision",
+    subtitle: "High-Efficacy Active Formulations",
     image: "/dossier-synthesis.png",
-    description: "Our proprietary catalytic synthesis protocol operates within fully sealed, nitrogen-purged isolators to prevent oxidative degradation during active ingredient formation.",
+    description: "Every formulation is engineered with optimal molar ratios and active bioavailability to ensure consistent, reliable therapeutic outcomes in gynecological and systemic therapy.",
     highlights: [
-      "Sub-micron precision dosing",
-      "Automated reaction monitoring",
-      "Zero atmospheric contamination"
+      "Precision active dosing",
+      "High GI tolerance profiles",
+      "Evidence-backed clinical synergy"
     ]
   },
   {
     id: "gmp",
-    title: "Aseptic Cleanrooms",
-    subtitle: "WHO-GMP Verified Facility",
+    title: "Quality Certification",
+    subtitle: "WHO-GMP & ISO Verified Partners",
     image: "/dossier-gmp.png",
-    description: "All formulations are processed in HEPA-filtered Class-100 cleanrooms under continuous positive pressure differential to eliminate particulate accumulation.",
+    description: "Our commercial formulations are produced in world-class, certified facilities complying with rigorous WHO-GMP, ISO 9001, and GLP quality management protocols.",
     highlights: [
-      "HEPA 99.999% air purification",
-      "Real-time microbiological monitoring",
-      "ISO 14644-1 Class 5 compliance"
+      "WHO-GMP quality compliance",
+      "Batch purity & potency assays",
+      "ISO 9001 certified standards"
     ]
   },
   {
-    id: "robotics",
-    title: "Robotic Bottling",
-    subtitle: "Zero-Touch Automated Packaging",
+    id: "packaging",
+    title: "Packaging Integrity",
+    subtitle: "Tamper-Evident Foil & Blister Packs",
     image: "/dossier-robotics.png",
-    description: "High-speed robotic arm arrays handle capsule filling, nitrogen flush sealing, and UV-sterilized bottle capping without human contact.",
+    description: "High-barrier Alu-Alu and blister packaging designed to protect active ingredients from moisture, oxidation, and temperature fluctuations across the entire supply chain.",
     highlights: [
-      "1,200 units per minute capacity",
-      "Laser weight verification",
-      "Tamper-evident induction sealing"
+      "Alu-Alu & Red strip protection",
+      "Moisture-impermeable sealing",
+      "Extended shelf-life stability"
     ]
   },
   {
     id: "bioequivalence",
-    title: "Bio-Equivalence Lab",
-    subtitle: "Systemic Efficacy Mapping",
+    title: "Bioavailability Mapping",
+    subtitle: "Consistent Clinical Performance",
     image: "/dossier-bioequivalence.png",
-    description: "Every production batch undergoes dissolution and bioavailability simulation to guarantee identical systemic performance across all patient demographics.",
+    description: "Every batch is verified through rigorous dissolution profiling and stability assays to ensure rapid, uniform systemic absorption and optimal patient adherence.",
     highlights: [
-      "In-vitro dissolution profiling",
+      "Rapid dissolution & absorption",
       "HPLC chromatogram verification",
-      "Accelerated stability chamber testing"
+      "Consistent therapeutic plasma levels"
     ]
   }
 ];
@@ -79,25 +79,25 @@ const scienceTabs = [
 const pillars = [
   {
     index: "01",
-    title: "Molecular Purity Index",
+    title: "Therapeutic Efficacy",
     tag: "PURITY_STABILITY",
-    desc: "Achieving absolute molecule stability through automated catalytic synthesis in Class-100 aseptic environments.",
+    desc: "Achieving optimal active molecule stability and clinical potency across all specialty formulations.",
     image: "/dossier-synthesis.png",
     icon: FlaskConical
   },
   {
     index: "02",
-    title: "Clinical Fidelity",
+    title: "Prescriber Trust",
     tag: "BIO_EQUIVALENCE",
-    desc: "Rigorous molecular mapping to exceed global reference standards for systemic therapeutic efficacy.",
+    desc: "Formulations engineered for rapid bioavailability and superior gastrointestinal tolerance.",
     image: "/dossier-bioequivalence.png",
     icon: Beaker
   },
   {
     index: "03",
-    title: "Global Compliance",
+    title: "Certified Compliance",
     tag: "REGULATORY_LOGIC",
-    desc: "Our laboratories adhere to stringent WHO-GMP and international ISO protocols for systemic safety.",
+    desc: "Strict adherence to stringent WHO-GMP, ISO 9001, and GLP quality protocols for patient safety.",
     image: "/dossier-gmp.png",
     icon: ShieldCheck
   }
@@ -109,14 +109,14 @@ export default function WhyUs() {
   return (
     <section id="why-us" className="bg-slate-50/70 py-16 sm:py-24 lg:py-32 relative overflow-hidden font-sans text-slate-900">
       
-      {/* Background Ambient Lighting */}
-      <div className="absolute top-10 left-10 w-[500px] h-[500px] bg-emerald-100/50 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[140px] pointer-events-none" />
+      {/* ── AMBIENT BACKGROUND GLOWS ── */}
+      <div className="absolute top-10 right-10 w-[500px] h-[500px] bg-emerald-100/50 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="w-full max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
         
-        {/* ── 1. HERO INTRO HEADER ── */}
-        <div className="w-full mb-16 border-b border-slate-200/80 pb-12 text-left">
+        {/* ── 1. INSTITUTIONAL HERO HEADER (WHITE CARD SYSTEM) ── */}
+        <div className="w-full mb-16 sm:mb-24 border-b border-slate-200/80 pb-10 sm:pb-12 text-left">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
             <div className="space-y-4 max-w-3xl">
               <motion.div
@@ -131,11 +131,11 @@ export default function WhyUs() {
               </motion.div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight">
-                Clinical <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">Superiority & Integrity</span>
+                Quality <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">Assurance & Trust</span>
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl">
-                Institutionalizing pharmaceutical excellence through closed-loop automated synthesis, Class-100 cleanroom isolation, and WHO-GMP compliance.
+                Delivering excellence in pharmaceutical marketing and distribution through WHO-GMP certified partner facilities, verified bioavailability, and prescriber confidence.
               </p>
             </div>
 
@@ -173,10 +173,10 @@ export default function WhyUs() {
         <div className="mb-24 sm:mb-32">
           <div className="text-left mb-10">
             <span className="text-xs font-black text-emerald-600 uppercase tracking-widest block mb-2">
-              Technological Infrastructure
+              Quality & Science Standards
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
-              Behind Our Manufacturing Stage
+              Behind Every Mythron Formulation
             </h2>
           </div>
 
