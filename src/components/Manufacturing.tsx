@@ -32,25 +32,29 @@ const insights = [
     category: "Specialty Focus",
     title: "GESTHRON-SR 200: Sustained Release Progesterone in Maternal Care",
     image: "/dossier-maternal.jpg",
-    grid: "md:col-span-2"
+    grid: "md:col-span-2",
+    position: "object-[center_25%]"
   },
   {
     category: "Clinical Profile",
     title: "FERMYTH-XT: Advanced Bioavailability in Iron & Folic Acid Therapy",
     image: "/dossier-vitality.jpg",
-    grid: "md:col-span-1"
+    grid: "md:col-span-1",
+    position: "object-[center_20%]"
   },
   {
     category: "Therapeutic Synergy",
     title: "MYTHCLAV LB 625: Broad-Spectrum Protection Against Resistant Strains",
     image: "/dossier-physician.jpg",
-    grid: "md:col-span-1"
+    grid: "md:col-span-1",
+    position: "object-[center_25%]"
   },
   {
     category: "Bone Mineralization",
     title: "MYTHCAL-XT: Advanced Calcium, D3 & Methylfolate Skeletal Synergy",
     image: "/dossier-bonehealth.jpg",
-    grid: "md:col-span-2"
+    grid: "md:col-span-2",
+    position: "object-[center_12%]"
   }
 ];
 
@@ -147,23 +151,23 @@ export default function Manufacturing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className={`relative rounded-2xl sm:rounded-3xl overflow-hidden group cursor-pointer border border-slate-200/90 shadow-md ${insight.grid} h-[280px] sm:h-[320px] lg:h-[360px]`}
+                className={`relative rounded-2xl sm:rounded-3xl overflow-hidden group cursor-pointer border border-slate-200/90 shadow-md ${insight.grid} h-[300px] sm:h-[340px] lg:h-[380px]`}
               >
                 <img 
                   src={insight.image} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  className={`absolute inset-0 w-full h-full object-cover ${insight.position} transition-transform duration-700 group-hover:scale-105`} 
                   alt={insight.title} 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/40 to-slate-950/30" />
                 
                 <div className="relative z-10 h-full p-6 sm:p-8 flex flex-col justify-between">
-                  <div className="bg-emerald-500/20 backdrop-blur-md px-3.5 py-1 rounded-full border border-emerald-400/30 w-fit">
-                    <span className="text-[9px] sm:text-[10px] font-black text-emerald-300 uppercase tracking-widest">
+                  <div className="bg-slate-950/70 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-emerald-400/50 w-fit shadow-md">
+                    <span className="text-[10px] sm:text-[11px] font-black text-emerald-400 uppercase tracking-wider">
                       {insight.category}
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-extrabold text-white leading-snug text-lg sm:text-xl lg:text-2xl group-hover:text-emerald-300 transition-colors">
+                    <h4 className="font-extrabold text-white leading-snug text-lg sm:text-xl lg:text-2xl drop-shadow-md group-hover:text-emerald-300 transition-colors">
                       {insight.title}
                     </h4>
                   </div>
