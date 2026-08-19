@@ -30,7 +30,7 @@ const scienceTabs = [
     id: "formulation",
     title: "Therapeutic Precision",
     subtitle: "High-Efficacy Active Formulations",
-    image: "/dossier-synthesis.png",
+    image: "/dossier-maternal.jpg",
     description: "Every formulation is engineered with optimal molar ratios and active bioavailability to ensure consistent, reliable therapeutic outcomes in gynecological and systemic therapy.",
     highlights: [
       "Precision active dosing",
@@ -42,7 +42,7 @@ const scienceTabs = [
     id: "gmp",
     title: "Quality Certification",
     subtitle: "WHO-GMP & ISO Verified Partners",
-    image: "/dossier-gmp.png",
+    image: "/dossier-physician.jpg",
     description: "Our commercial formulations are produced in world-class, certified facilities complying with rigorous WHO-GMP, ISO 9001, and GLP quality management protocols.",
     highlights: [
       "WHO-GMP quality compliance",
@@ -54,7 +54,7 @@ const scienceTabs = [
     id: "packaging",
     title: "Packaging Integrity",
     subtitle: "Tamper-Evident Foil & Blister Packs",
-    image: "/dossier-robotics.png",
+    image: "/prod-mythclav.png",
     description: "High-barrier Alu-Alu and blister packaging designed to protect active ingredients from moisture, oxidation, and temperature fluctuations across the entire supply chain.",
     highlights: [
       "Alu-Alu & Red strip protection",
@@ -66,7 +66,7 @@ const scienceTabs = [
     id: "bioequivalence",
     title: "Bioavailability Mapping",
     subtitle: "Consistent Clinical Performance",
-    image: "/dossier-bioequivalence.png",
+    image: "/dossier-vitality.jpg",
     description: "Every batch is verified through rigorous dissolution profiling and stability assays to ensure rapid, uniform systemic absorption and optimal patient adherence.",
     highlights: [
       "Rapid dissolution & absorption",
@@ -82,7 +82,7 @@ const pillars = [
     title: "Therapeutic Efficacy",
     tag: "PURITY_STABILITY",
     desc: "Achieving optimal active molecule stability and clinical potency across all specialty formulations.",
-    image: "/dossier-synthesis.png",
+    image: "/dossier-maternal.jpg",
     icon: FlaskConical
   },
   {
@@ -90,7 +90,7 @@ const pillars = [
     title: "Prescriber Trust",
     tag: "BIO_EQUIVALENCE",
     desc: "Formulations engineered for rapid bioavailability and superior gastrointestinal tolerance.",
-    image: "/dossier-bioequivalence.png",
+    image: "/dossier-vitality.jpg",
     icon: Beaker
   },
   {
@@ -98,7 +98,7 @@ const pillars = [
     title: "Certified Compliance",
     tag: "REGULATORY_LOGIC",
     desc: "Strict adherence to stringent WHO-GMP, ISO 9001, and GLP quality protocols for patient safety.",
-    image: "/dossier-gmp.png",
+    image: "/dossier-bonehealth.jpg",
     icon: ShieldCheck
   }
 ];

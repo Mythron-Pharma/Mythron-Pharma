@@ -31,25 +31,25 @@ const insights = [
   {
     category: "Specialty Focus",
     title: "GESTHRON-SR 200: Sustained Release Progesterone in Maternal Care",
-    image: "/dossier-synthesis.png",
+    image: "/dossier-maternal.jpg",
     grid: "md:col-span-2"
   },
   {
     category: "Clinical Profile",
     title: "FERMYTH-XT: Advanced Bioavailability in Iron & Folic Acid Therapy",
-    image: "/dossier-bioequivalence.png",
+    image: "/dossier-vitality.jpg",
     grid: "md:col-span-1"
   },
   {
     category: "Therapeutic Synergy",
     title: "MYTHCLAV LB 625: Broad-Spectrum Protection Against Resistant Strains",
-    image: "/dossier-robotics.png",
+    image: "/dossier-physician.jpg",
     grid: "md:col-span-1"
   },
   {
     category: "Bone Mineralization",
     title: "MYTHCAL-XT: Advanced Calcium, D3 & Methylfolate Skeletal Synergy",
-    image: "/dossier-gmp.png",
+    image: "/dossier-bonehealth.jpg",
     grid: "md:col-span-2"
   }
 ];
